@@ -9,7 +9,7 @@ function App() {
   return (
     <Stack  className="App">
       <Navbar />
-      <AllRoutes />
+      <AllRoutes  />
       <Footer />
     </Stack>
   );
@@ -20,3 +20,4 @@ export default App;
  //npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
   // npm i react-router-dom
   // npm install react-icons --save
+  // npm install react-slick --save
