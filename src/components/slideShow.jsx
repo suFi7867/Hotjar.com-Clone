@@ -12,8 +12,8 @@ const AutoPlay = ({images}) => {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 1500,
-        autoplaySpeed: 1500,
+        speed: 1050,
+        autoplaySpeed: 0,
         cssEase: "linear"
       };
 
@@ -25,7 +25,6 @@ const AutoPlay = ({images}) => {
             images.map((el)=>(
                 <Stack>
                     <Image width={{base:"50px", md:"150px"}} src={el} />
-
                 </Stack>
             ))
            }
