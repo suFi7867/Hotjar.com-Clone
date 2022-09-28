@@ -1,44 +1,36 @@
+import { Image, Stack } from "@chakra-ui/react";
 import React from "react";
 import Slider from "react-slick";
 
 
-const AutoPlay = () => {
+const AutoPlay = ({images}) => {
 
+  
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        speed: 1500,
+        autoplaySpeed: 1500,
         cssEase: "linear"
       };
 
       return (
-        <div>
-          <h2>Auto Play</h2>
-          <Slider {...settings}>
-            <div>
-              <h3>1</h3>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div>
+        <Stack  maxW={{base:"300px" , md:"800px" , xl:"full"}} >
+         
+          <Slider style={{gap:"20px"}} {...settings}>
+           {
+            images.map((el)=>(
+                <Stack>
+                    <Image width={{base:"50px", md:"150px"}} src={el} />
+
+                </Stack>
+            ))
+           }
           </Slider>
-        </div>
+        </Stack>
       );
 }
 
