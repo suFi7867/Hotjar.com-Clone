@@ -304,7 +304,58 @@ if(isLoading){
         </Stack>
 
         <Divider />
+        
+        <Stack  bg="linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%)" direction={{base:"column", md:"row"}} margin="auto" align="center" spacing={5} padding={10} >
 
+            <VStack  alignItems="flex-start" textAlign="left" p={5} spacing={3}>
+              <Text fontWeight="semibold" fontSize="2xl">Get started with Hotjar</Text>
+               <Text fontWeight="thin" fontSize="15px">It only takes a few minutes to get       started with     Hotjar. Understand your users—start free, today.</Text>
+                   <Stack direction={{base:"column",md:"column", lg:"column",xl:"row" }}>
+                        <Button fontWeight="lighter" colorScheme="messenger" variant='outline'>
+                         To The Product
+                       </Button>
+                       
+                       <Button fontWeight="lighter" colorScheme="messenger" variant='solid'>
+                         Get Started Free
+                       </Button>
+      
+                  </Stack>
+                  <Text fontWeight="thin" fontSize="15px">No credit card required</Text>
+            </VStack>
+
+         <Divider display={{base:"block", md:"none"}} />
+
+         <Stack  spacing={6} direction={{base:"column",md:"column", lg:"column",xl:"column" }} >
+           <HStack spacing={5} >
+             <Image src='https://images.ctfassets.net/lh3zuq09vnm2/6zxMbtJI8T43Ia7uHg49YB/32b9315a40b4f1363fb448bd0cab5534/icon-no-card.svg' w="25px" />
+             <Text color="GrayText">
+             No credit card required
+             </Text>
+           </HStack>
+           <HStack spacing={5} >
+             <Image src='https://images.ctfassets.net/lh3zuq09vnm2/o8L9i7vSjKytR7aYfef7C/ead95db8958fa7ef66750e9ba4fea91e/icon-sign.svg' w="25px" />
+             <Text color="GrayText">
+             56,549 users signed up last month
+             </Text>
+           </HStack>
+           <HStack spacing={5} >
+             <Image src='https://images.ctfassets.net/lh3zuq09vnm2/6lgSqbFdgGqSyLx3sGk18/e768204f0c3755e5dd816762a402ac24/icon-privacy.svg' w="25px" />
+             <Text color="GrayText">
+             GDPR- & CCPA-ready
+             </Text>
+           </HStack>
+        </Stack>
+
+         
+
+ 
+
+
+
+        </Stack>
+
+
+        <Divider />
 
         <Stack margin="auto" align="center" spacing={5} >
 
@@ -315,6 +366,42 @@ if(isLoading){
             <Button  size="lg" fontWeight="lighter" colorScheme="messenger" variant='outline'>
              Explore Intergration
            </Button>
+        </Stack>
+
+
+        <Divider />
+
+        <Stack  bg="linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%)" direction={{base:"column", md:"row"}} margin="auto" align="center" spacing={5} padding={10} >
+
+            <VStack  alignItems="flex-start" textAlign="left" p={5} spacing={6}>
+              <Text fontWeight="semibold" fontSize="2xl">Get started with Hotjar</Text>
+               <Text fontWeight="thin" fontSize="15px">It only takes a few minutes to get       started with     Hotjar. Understand your users—start free, today.</Text>
+                   <Stack direction={{base:"column",md:"column", lg:"column",xl:"row" }}>
+                        <Button fontWeight="lighter" colorScheme="messenger" variant='outline'>
+                         To The Product
+                       </Button>
+                       
+                       <Button fontWeight="lighter" colorScheme="messenger" variant='solid'>
+                         Get Started Free
+                       </Button>
+      
+                  </Stack>
+                  <Text fontWeight="thin" fontSize="15px">No credit card required</Text>
+            </VStack>
+
+         <Divider display={{base:"block", md:"none"}} />
+
+         <Stack  spacing={6} direction={{base:"column",md:"column", lg:"column",xl:"column" }} >
+         <Image 
+          w={300} src='https://i.im.ge/2022/09/01/O3av8S.sufi-black.png' ></Image>
+        </Stack>
+
+         
+
+ 
+
+
+
         </Stack>
 
 
