@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <AllRoutes  />
       <Footer />
-      <FeedBack />
+   
     </Stack>
   );
 }
