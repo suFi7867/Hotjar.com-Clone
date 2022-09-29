@@ -29,3 +29,5 @@ export default App;
   ////****** SLIDER  /////////
   // npm install react-slick --save
   // npm install slick-carousel --save
+
+  // npm install react-icons --save
