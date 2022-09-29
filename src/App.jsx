@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import AllRoutes from './Routes/AllRoutes';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import FeedBack from './components/SmallComponents/FeedBack';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <AllRoutes  />
       <Footer />
+      <FeedBack />
     </Stack>
   );
 }

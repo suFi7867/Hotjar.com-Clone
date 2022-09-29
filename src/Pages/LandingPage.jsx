@@ -1,6 +1,7 @@
-import { Box, Button, HStack, Image, Spacer, Stack, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Button, Container, Divider, Grid, Highlight, HStack, Image, SimpleGrid, Spacer, Stack, Text, VStack, Wrap, WrapItem } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import AutoPlay from '../components/slideShow'
+import Loader from '../components/SmallComponents/Loader'
 
 const images = [
     "https://images.ctfassets.net/lh3zuq09vnm2/7siImqwRupwoBHyJCaO1zy/2d7ec1ccc7761f76c8fe18de52e889a4/T-Mobile.svg",
@@ -47,13 +48,65 @@ const logoSlider = [
 
 ]
 
+const HotJar = [
+  {
+    image:"https://images.ctfassets.net/lh3zuq09vnm2/5khXOtcSPp0ttREXhZirXR/bf41bc4a997d0ea49359482c4c36d257/Heatmaps.svg",
+    name :"Heatmap",
+     des:  "Visualize User Behaviour"  
+  },
+  {
+    image:"https://images.ctfassets.net/lh3zuq09vnm2/6Qv16uzcArgmj23zvPE1Zg/e7861ed2958dda93ffdbf313c8a228c1/Recordings.svg",
+    name :"Recording",
+     des:  "See What User See"  
+  },
+  {
+    image:"https://images.ctfassets.net/lh3zuq09vnm2/4COczjOFD9M9107Fg88Ol6/4a0040ffe4c7ebdd8d13c60b2408699a/Incoming-feedback.svg",
+    name :"FeedBack",
+     des:  "Discover How User Fu#king Feel"  
+  },
+  {
+    image:"https://images.ctfassets.net/lh3zuq09vnm2/4FznAGtU4dktOtbIGubStD/e496e6120efcf17cbb4a8b514ecbec43/Surveys.svg",
+    name :"Surveys",
+     des:  "Hear From Your Users"  
+  }
+]
+
+
 
 const LandingPage = () => {
+////////////////////////LOADER //////////////////////////////
+// is Loading   // 
+const [isLoading, setIsLoading] = useState(true);
+
+setTimeout(() => {
+setIsLoading(false)
+ 
+}, 1500);
+ 
+
+// console.log(data)
+
+if(isLoading){
+
+ return (  
+    <Loader />
+   ) 
+
+}
+////////////////////////LOADER //////////////////////////////
+
+
   return (
     <Stack alignSelf="center" maxW="1400px"  spacing={50} padding={{base:"25px 50px",md:"50px 100px"}} >
 
-       <Stack>
-       <Text textAlign="left" maxWidth={{base:"100%",md:"100%",lg:"60%" }} fontSize={{base:"32px",lg:"42px" }} >Understand how users behave on your site, what they need, and how they feel, fast.
+       <Stack p={5}>
+       <Text  marginTop={50} textAlign="left" maxWidth={{base:"100%",md:"100%",lg:"60%" }} fontSize={{base:"32px",lg:"42px" }} >
+        <Highlight
+        query='how users behave' 
+        styles={{color:"red.500"}}
+        >
+        Understand how users behave on your site, what they need, and how they feel, fast.
+        </Highlight>
         </Text>
 
         <Stack  spacing={6} direction={{base:"column",md:"column", lg:"column",xl:"row" }} >
@@ -116,6 +169,8 @@ const LandingPage = () => {
         </Stack>
        </Stack>
 
+   <Divider />
+
         <Stack margin="auto" align="center" spacing={10} >
             <Text fontWeight="semibold" fontSize="3xl">Trusted by 900,000 websites in 180+ countries</Text>
             <AutoPlay images={images} />
@@ -141,6 +196,112 @@ const LandingPage = () => {
         </Stack>
         </Stack>
 
+        <Divider />
+
+        <Stack margin="auto" align="center" spacing={5} >
+
+          <Text fontWeight="semibold" fontSize="3xl">How Hotjar works</Text>
+          <Text fontWeight="thin" fontSize="xl">Understand how users really experience your site.</Text>
+
+         <SimpleGrid columns={{base:2,md:3,lg:4}} spacing={5} >
+           
+           {
+             HotJar.map((el)=>(
+              <Stack spacing={10} textAlign="left"
+               padding={5} borderWidth='1px' borderRadius='lg' overflow='hidden'>
+                <Image src={el.image} />
+                 <Stack textAlign="left">
+                 <Text fontWeight="semibold" fontSize="xl">{el.name}</Text>
+                <Text fontWeight="thin" fontSize="sm">{el.des}</Text>
+                 </Stack>
+
+                <Spacer />
+                <Text color="blue.500" as="u" >Learn More</Text>
+              </Stack>
+             ))
+           }
+
+
+         </SimpleGrid>
+
+          
+        </Stack>
+
+        <Divider />
+
+        <Stack  direction={{base:"column", md:"row"}} margin="auto" align="center" spacing={5} >
+
+          <VStack>
+            
+          <Text align="left" fontSize={{base:"20px", md:"2xl"}} >
+          <Highlight
+        query='Learn how we keep' 
+        styles={{color:"red.500"}}
+        >
+          Learn how we keep end-user privacy at the heart of everything we do.</Highlight>
+
+          </Text>
+          <Box bg='orange.500' w='100%' p={3} color='white'>
+            HOTJAR 
+          </Box>  
+
+       </VStack>
+
+          <SimpleGrid  w="full" columns={{base:1, md:2}} >
+        
+            <VStack alignItems="flex-start"  padding={5} >
+              <HStack>
+              <Image src='https://images.ctfassets.net/lh3zuq09vnm2/5B8CskghnpgzwFXtm8Ugma/80bebef0f59d2b56882429ff1ab72942/Legal.svg' />
+               <Text  w="full" fontWeight="semibold"  >GDPR commitment</Text>
+              </HStack>
+              
+              <Text color="blue.500" as="u" >Learn More</Text>
+            </VStack>
+
+            <Divider display={{base:"block", md:"none"}} />
+
+            <VStack alignItems="flex-start"  padding={5} >
+              <HStack>
+              <Image src='https://images.ctfassets.net/lh3zuq09vnm2/5B8CskghnpgzwFXtm8Ugma/80bebef0f59d2b56882429ff1ab72942/Legal.svg' />
+               <Text  w="full" fontWeight="semibold"  >GDPR commitment</Text>
+              </HStack>
+              
+              <Text color="blue.500" as="u" >Learn More</Text>
+            </VStack>
+
+            <Divider display={{base:"block", md:"none"}} />
+
+            <VStack alignItems="flex-start"  padding={5} >
+              <HStack>
+              <Image src='https://images.ctfassets.net/lh3zuq09vnm2/5B8CskghnpgzwFXtm8Ugma/80bebef0f59d2b56882429ff1ab72942/Legal.svg' />
+               <Text  w="full" fontWeight="semibold"  >GDPR commitment</Text>
+              </HStack>
+              
+              <Text color="blue.500" as="u" >Learn More</Text>
+            </VStack>
+
+            <Divider display={{base:"block", md:"none"}} />
+            <VStack alignItems="flex-start"  padding={5} >
+              <HStack>
+              <Image src='https://images.ctfassets.net/lh3zuq09vnm2/5B8CskghnpgzwFXtm8Ugma/80bebef0f59d2b56882429ff1ab72942/Legal.svg' />
+               <Text  w="full" fontWeight="semibold"  >GDPR commitment</Text>
+              </HStack>
+              
+              <Text color="blue.500" as="u" >Learn More</Text>
+            </VStack>
+
+         
+            
+         
+            
+           
+
+          </SimpleGrid>
+
+        </Stack>
+
+        <Divider />
+
 
         <Stack margin="auto" align="center" spacing={5} >
 
@@ -148,13 +309,13 @@ const LandingPage = () => {
             <Text fontWeight="thin" fontSize="xl">Save time and effort. Integrate Hotjar with dozens of tools.</Text>
 
             <AutoPlay images={logoSlider} />
-            <Button size="lg" fontWeight="lighter" colorScheme="messenger" variant='outline'>
+            <Button  size="lg" fontWeight="lighter" colorScheme="messenger" variant='outline'>
              Explore Intergration
            </Button>
         </Stack>
 
 
-        
+        <Divider />
 
   
 

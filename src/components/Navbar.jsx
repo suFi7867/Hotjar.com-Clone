@@ -39,9 +39,10 @@ const Navbar = () => {
 
 
   return (
-    <HStack  p="0px 8%" justify="center"  w="100%" h="64px" borderBottom="1px solid #eeee">
+    <HStack   style={{position:"fixed" }} p="0px 8%" justify="center"  w="100%" h="64px" borderBottom="1px solid #eeee">
+      
        
-       <HStack position="sticky" w="full" maxW="1400px" p="0.6rem"  spacing={8}>
+       <HStack  w="full" maxW="1400px" p="0.6rem"  spacing={8}>
          
           <HStack >
              <Image h={7} w="" src="https://insights.hotjar.com/static/dd3f3da381ecbb6aa239.svg" />
@@ -386,6 +387,8 @@ const Navbar = () => {
           </DrawerBody>
         </DrawerContent>
         </Drawer>   
+
+      
       
     
     </HStack>
