@@ -49,7 +49,7 @@ const About = () => {
 
     
   return (
-    <Stack  alignSelf="center" maxW="1400px" spacing={50} 
+    <Stack border="orange" alignSelf="center" maxW="1400px" spacing={50} 
     padding={{base:"25px 50px",md:"50px 100px"}} >
 
 
@@ -220,7 +220,7 @@ const About = () => {
     </Button>
     </Stack>
     
- <Divider />
+    <Divider />
 
             <VStack  bg="linear-gradient(183deg, rgba(207,249,255,1) 0%, rgba(216,205,255,1) 41%, rgba(255,227,254,1) 67%, rgba(175,188,255,0.1910990168539326) 100%)"  textAlign="left" p={5} spacing={5}>
               <Text fontWeight="semibold" fontSize="4xl">Get started with Hotjar</Text>
@@ -235,11 +235,6 @@ const About = () => {
                   </Stack>
                   <Text fontWeight="thin" fontSize="15px">No credit card required</Text>
             </VStack>
-
-  
-
-
-
 
     </Stack>
   )
