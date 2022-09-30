@@ -148,12 +148,10 @@ if(isLoading){
             Hotjar is an intuitive, visual way to discover, consolidate, and communicate user needs.
             </Text>
           
-            
-
             <Stack direction={{base:"column",md:"column", lg:"column",xl:"row" }}>
             <Button fontWeight="lighter" colorScheme="messenger" variant='outline'>
              Start With Free Trial
-           </Button>
+            </Button>
            
            <Button fontWeight="lighter" colorScheme="messenger" variant='solid'>
              Login With Google
@@ -172,7 +170,7 @@ if(isLoading){
         </Stack>
        </Stack>
 
-   <Divider />
+      <Divider />
 
         <Stack margin="auto" align="center" spacing={10} >
             <Text fontWeight="semibold" fontSize="3xl">Trusted by 900,000 websites in 180+ countries</Text>
@@ -346,11 +344,6 @@ if(isLoading){
            </HStack>
         </Stack>
 
-         
-
- 
-
-
 
         </Stack>
 
@@ -367,6 +360,31 @@ if(isLoading){
              Explore Intergration
            </Button>
         </Stack>
+        
+        <Divider />
+
+        <SimpleGrid columns={{base:2, md:3}}  margin="auto" align="center" spacing={5} >
+
+              <VStack  justifyContent="left" textAlign="left" p={5} >
+                <Image src='https://images.ctfassets.net/lh3zuq09vnm2/7ddUqkRHENLp65ybfpxC27/ac88f31a04b5509ecdcc512c85347b23/Heatmaps-guide-hero.svg' />
+                <Text fontWeight="semibold">The complete guide to heatmaps</Text>
+                <Text>Heatmaps are a powerful way to understand what users do on your website pages—where they click, how far they scroll, what they look at or ignore. </Text>
+              </VStack>
+
+              <VStack  justifyContent="left" textAlign="left" p={5} >
+                <Image src='https://images.ctfassets.net/lh3zuq09vnm2/2AEDwOg71AEOHKkHbPYNxv/dc8175848bddbc45a70075ccea56b0a9/behaviour-analytics-guide-hero.svg' />
+                <Text fontWeight="semibold">The beginner’s guide to behavior analytics</Text>
+                <Text>Behavior analytics is the key to understanding your customers, and how they really experience and interact </Text>
+              </VStack>
+
+              <VStack justifyContent="left" textAlign="left"  p={5}>
+                <Image src='https://images.ctfassets.net/lh3zuq09vnm2/5FTM6xaUDTT4zDxqcgTEH5/a68a0b1e353050da6d1bcf005933ed0a/PX-guide-hero.svg' />
+                <Text fontWeight="semibold">What are product experience insights? (and why every product team needs them)</Text>
+                <Text>Heatmaps are a powerful way to understand what users do on your website pages—where they click. </Text>
+
+              </VStack>
+
+        </SimpleGrid>
 
 
         <Divider />
@@ -396,16 +414,12 @@ if(isLoading){
           w={300} src='https://i.im.ge/2022/09/01/O3av8S.sufi-black.png' ></Image>
         </Stack>
 
-         
-
- 
-
-
-
         </Stack>
 
-
         <Divider />
+
+
+      
 
   
 

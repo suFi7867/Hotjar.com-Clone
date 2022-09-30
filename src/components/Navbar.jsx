@@ -29,8 +29,8 @@ const Links = [
         path:"/Learn"
     },
     {
-        name:"Company",
-        path:"/Company"
+        name:"About",
+        path:"/about"
     }
 ]
 
@@ -209,7 +209,7 @@ const Navbar = () => {
                    <Flex alignItems="center" > 
                          <IconButton color="red.500" 
                          icon= {<MdEditNotifications/>} bg="none" />
-                          <Text>Product Tour</Text> 
+                          <Link to="/about">About Us</Link> 
                    </Flex>
                    <Divider />
                    <Flex alignItems="center" > 
