@@ -41,8 +41,9 @@ const Navbar = () => {
 
   return (
     <HStack 
+   
       bg="whiteAlpha.900"
-         style={{position:"fixed" }} 
+         style={{position:"sticky", top:0 }} 
          p="0px 8%" justify="center"  
          w="100%" h="64px" 
          borderBottom="1px solid #eeee">

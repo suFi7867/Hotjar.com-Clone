@@ -42,7 +42,7 @@ if(isLoading){
 
   return (
     <Stack border="orange" alignSelf="center" maxW="1400px" spacing={50} 
-            padding={{base:"25px 50px",md:"50px 100px"}} >
+    padding={{base:"0px",md:"50px 100px"}} >
 
        <Stack  p={5} >
        <Text  marginTop={50}  fontWeight="semibold"
@@ -84,7 +84,7 @@ if(isLoading){
 
      <Text fontSize="4xl" >NESTED ROUTES</Text>
 
-    <HStack alignSelf="center" >
+    <HStack bg="white" alignSelf="center" p={5}  style={{position:"sticky", top:60 }}  >
        {
         Links.map((el)=>(
           <NavLink 

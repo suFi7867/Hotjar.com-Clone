@@ -50,7 +50,7 @@ const About = () => {
     
   return (
     <Stack border="orange" alignSelf="center" maxW="1400px" spacing={50} 
-    padding={{base:"25px 50px",md:"50px 100px"}} >
+    padding={{base:"20px",md:"50px 100px"}} >
 
 
         <Stack marginTop="60px" direction={{base:"column", md:"row"}} >

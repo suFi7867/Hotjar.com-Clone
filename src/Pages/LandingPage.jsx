@@ -100,7 +100,7 @@ if(isLoading){
 
   return (
     <Stack border="orange" alignSelf="center" maxW="1400px" spacing={50} 
-    padding={{base:"25px 50px",md:"50px 100px"}} >
+    padding={{base:"20px",md:"50px 100px"}} >
 
        <Stack p={5}>
        <Text  marginTop={50} textAlign="left" maxWidth={{base:"100%",md:"100%",lg:"60%" }} fontSize={{base:"32px",lg:"42px" }} >

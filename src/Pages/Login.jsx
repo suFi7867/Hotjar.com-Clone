@@ -65,7 +65,7 @@ if(isLoading){
   return (
     <HStack  w="full" >
 
-        <VStack spacing={5} w="100vh" padding={10}  height="100vh"  >
+        <VStack spacing={5} w="100vh" padding={{base:"20px",md:"50px 100px"}}  height="100vh"  >
 
             <Stack w="full"  textAlign="left">
             <Text marginTop={50} fontSize="xl" fontWeight="semibold">
