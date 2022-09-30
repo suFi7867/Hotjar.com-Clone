@@ -1,6 +1,7 @@
 import { Button, Divider, HStack, SimpleGrid, Spacer, Stack, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import AutoPlay from '../slideShow'
+import Loader from '../SmallComponents/Loader'
 // #fcfae6
 const images = [
     "https://images.ctfassets.net/lh3zuq09vnm2/7siImqwRupwoBHyJCaO1zy/2d7ec1ccc7761f76c8fe18de52e889a4/T-Mobile.svg",
@@ -32,6 +33,30 @@ const images = [
   ]
  
 const Observe = () => {
+
+    ////////////////////////LOADER //////////////////////////////
+// is Loading   // 
+const [isLoading, setIsLoading] = useState(true);
+
+setTimeout(() => {
+setIsLoading(false)
+ 
+}, 1000);
+ 
+
+// console.log(data)
+
+if(isLoading){
+
+ return (  
+    <Loader />
+   ) 
+
+}
+
+
+////////////////////////LOADER //////////////////////////////
+
   return (
     <Stack w="full" maxW="1400px" bg="#fcfae6" spacing={25} p={10} >
        
@@ -46,7 +71,7 @@ const Observe = () => {
        </HStack>
  <Divider />
  <AutoPlay images={images} />
-       <SimpleGrid columns={{base:2,md:3,lg:4}} spacing={5} >
+       <SimpleGrid columns={{base:1,md:3,lg:4}} spacing={5} >
            
      
               <Stack bg="white" border="0.5px solid #6e71cc" spacing={10} textAlign="left"

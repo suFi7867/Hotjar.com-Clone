@@ -24,10 +24,7 @@ const Links = [
         name:"Pricing",
         path:"/Pricing"
     },
-    {
-        name:"Learn",
-        path:"/Learn"
-    },
+   
     {
         name:"About",
         path:"/about"
@@ -59,16 +56,13 @@ const Navbar = () => {
           </HStack>
 
           <Box  display={{ base: 'none', md: 'none', lg: 'block' }} >
-          <HStack  
-         
-               spacing={5} >
+          <HStack    spacing={5} >
             {
                 Links.map((el)=>(
 
                     <NavLink
                     key={el.path}
                     to={el.path}
-                 
                     className={({ isActive }) => (isActive ? "activeS" : "defaultS")
                   } end
                   >
@@ -205,30 +199,37 @@ const Navbar = () => {
                    </AccordionButton>
               
                  <AccordionPanel  pb={4}>
+
                    <VStack alignItems="left" >
-                   <Flex alignItems="center" > 
-                         <IconButton color="red.500" 
+
+                    <Link to="/" onClick={()=>onClose()} >
+                    <Flex alignItems="center" > 
+                         <IconButton  color="red.500" 
                          icon= {<MdEditNotifications/>} bg="none" />
-                          <Link to="/about">About Us</Link> 
-                   </Flex>
+                          <Text>Products</Text>
+                   </Flex></Link> 
                    <Divider />
+                   
+                   <Link to="/WhyHotjar" onClick={()=>onClose()} >
                    <Flex alignItems="center" > 
-                         <IconButton color="red.500" 
+                         <IconButton  color="red.500" 
                          icon= {<MdFeed/>} bg="none" />
-                          <Text>HeatMap</Text> 
-                   </Flex>
+                           <Text>WhyHotJar</Text>
+                   </Flex></Link> 
                    <Divider />
+                   <Link to="/pricing" onClick={()=>onClose()} >
                    <Flex alignItems="center" > 
                          <IconButton color="red.500" 
                          icon= {<MdDynamicFeed/>} bg="none" />
-                          <Text>FeedBack</Text> 
-                   </Flex>
+                          <Text>Pricing</Text>
+                   </Flex></Link> 
                    <Divider />
+                   <Link to="/about" onClick={()=>onClose()} >
                    <Flex alignItems="center" > 
                          <IconButton color="red.500" 
                          icon= {<MdEco/>} bg="none" />
-                          <Text>Contact</Text> 
-                   </Flex>
+                        <Text>About</Text>
+                   </Flex></Link>
                    <Divider />
                  
 
@@ -249,38 +250,47 @@ const Navbar = () => {
                      </Box>
                      <AccordionIcon />
                    </AccordionButton>
-              
-                 <AccordionPanel  pb={4}>
-                   <VStack alignItems="left" >
-                   <Flex alignItems="center" > 
-                         <IconButton color="red.500" 
-                         icon= {<MdEditNotifications/>} bg="none" />
-                          <Text>Product Tour</Text> 
-                   </Flex>
-                   <Divider />
-                   <Flex alignItems="center" > 
-                         <IconButton color="red.500" 
-                         icon= {<MdFeed/>} bg="none" />
-                          <Text>HeatMap</Text> 
-                   </Flex>
-                   <Divider />
-                   <Flex alignItems="center" > 
-                         <IconButton color="red.500" 
-                         icon= {<MdDynamicFeed/>} bg="none" />
-                          <Text>FeedBack</Text> 
-                   </Flex>
-                   <Divider />
-                   <Flex alignItems="center" > 
-                         <IconButton color="red.500" 
-                         icon= {<MdEco/>} bg="none" />
-                          <Text>Contact</Text> 
-                   </Flex>
-                   <Divider />
-                 
+          
+                   <AccordionPanel  pb={4}>
 
-                   </VStack>
+<VStack alignItems="left" >
 
-                 </AccordionPanel>
+ <Link to="/" onClick={()=>onClose()} >
+ <Flex alignItems="center" > 
+      <IconButton  color="red.500" 
+      icon= {<MdEditNotifications/>} bg="none" />
+       <Text>Products</Text>
+</Flex></Link> 
+<Divider />
+
+<Link to="/WhyHotjar" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton  color="red.500" 
+      icon= {<MdFeed/>} bg="none" />
+        <Text>WhyHotJar</Text>
+</Flex></Link> 
+<Divider />
+<Link to="/pricing" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton color="red.500" 
+      icon= {<MdDynamicFeed/>} bg="none" />
+       <Text>Pricing</Text>
+</Flex></Link> 
+<Divider />
+<Link to="/about" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton color="red.500" 
+      icon= {<MdEco/>} bg="none" />
+     <Text>About</Text>
+</Flex></Link>
+<Divider />
+
+
+</VStack>
+
+</AccordionPanel>
+
+
 
                  
                </AccordionItem>
@@ -297,37 +307,47 @@ const Navbar = () => {
                 <AccordionIcon />
               </AccordionButton>
          
-            <AccordionPanel  pb={4}>
-              <VStack alignItems="left" >
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdEditNotifications/>} bg="none" />
-                     <Text>Product Tour</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdFeed/>} bg="none" />
-                     <Text>HeatMap</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdDynamicFeed/>} bg="none" />
-                     <Text>FeedBack</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdEco/>} bg="none" />
-                     <Text>Contact</Text> 
-              </Flex>
-              <Divider />
-            
+  
+              <AccordionPanel  pb={4}>
 
-              </VStack>
+<VStack alignItems="left" >
 
-            </AccordionPanel>
+ <Link to="/" onClick={()=>onClose()} >
+ <Flex alignItems="center" > 
+      <IconButton  color="red.500" 
+      icon= {<MdEditNotifications/>} bg="none" />
+       <Text>Products</Text>
+</Flex></Link> 
+<Divider />
+
+<Link to="/WhyHotjar" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton  color="red.500" 
+      icon= {<MdFeed/>} bg="none" />
+        <Text>WhyHotJar</Text>
+</Flex></Link> 
+<Divider />
+<Link to="/pricing" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton color="red.500" 
+      icon= {<MdDynamicFeed/>} bg="none" />
+       <Text>Pricing</Text>
+</Flex></Link> 
+<Divider />
+<Link to="/about" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton color="red.500" 
+      icon= {<MdEco/>} bg="none" />
+     <Text>About</Text>
+</Flex></Link>
+<Divider />
+
+
+</VStack>
+
+</AccordionPanel>
+
+
 
             
                </AccordionItem>
@@ -343,37 +363,47 @@ const Navbar = () => {
                 <AccordionIcon />
               </AccordionButton>
          
-            <AccordionPanel  pb={4}>
-              <VStack alignItems="left" >
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdEditNotifications/>} bg="none" />
-                     <Text>Product Tour</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdFeed/>} bg="none" />
-                     <Text>HeatMap</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdDynamicFeed/>} bg="none" />
-                     <Text>FeedBack</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdEco/>} bg="none" />
-                     <Text>Contact</Text> 
-              </Flex>
-              <Divider />
-            
+           
+              <AccordionPanel  pb={4}>
 
-              </VStack>
+<VStack alignItems="left" >
 
-            </AccordionPanel>
+ <Link to="/" onClick={()=>onClose()} >
+ <Flex alignItems="center" > 
+      <IconButton  color="red.500" 
+      icon= {<MdEditNotifications/>} bg="none" />
+       <Text>Products</Text>
+</Flex></Link> 
+<Divider />
+
+<Link to="/WhyHotjar" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton  color="red.500" 
+      icon= {<MdFeed/>} bg="none" />
+        <Text>WhyHotJar</Text>
+</Flex></Link> 
+<Divider />
+<Link to="/pricing" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton color="red.500" 
+      icon= {<MdDynamicFeed/>} bg="none" />
+       <Text>Pricing</Text>
+</Flex></Link> 
+<Divider />
+<Link to="/about" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton color="red.500" 
+      icon= {<MdEco/>} bg="none" />
+     <Text>About</Text>
+</Flex></Link>
+<Divider />
+
+
+</VStack>
+
+</AccordionPanel>
+
+
 
             
             
@@ -390,37 +420,47 @@ const Navbar = () => {
                 <AccordionIcon />
               </AccordionButton>
          
-            <AccordionPanel  pb={4}>
-              <VStack alignItems="left" >
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdEditNotifications/>} bg="none" />
-                     <Text>Product Tour</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdFeed/>} bg="none" />
-                     <Text>HeatMap</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdDynamicFeed/>} bg="none" />
-                     <Text>FeedBack</Text> 
-              </Flex>
-              <Divider />
-              <Flex alignItems="center" > 
-                    <IconButton color="red.500" 
-                    icon= {<MdEco/>} bg="none" />
-                     <Text>Contact</Text> 
-              </Flex>
-              <Divider />
-            
+           
+              <AccordionPanel  pb={4}>
 
-              </VStack>
+<VStack alignItems="left" >
 
-            </AccordionPanel>
+ <Link to="/" onClick={()=>onClose()} >
+ <Flex alignItems="center" > 
+      <IconButton  color="red.500" 
+      icon= {<MdEditNotifications/>} bg="none" />
+       <Text>Products</Text>
+</Flex></Link> 
+<Divider />
+
+<Link to="/WhyHotjar" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton  color="red.500" 
+      icon= {<MdFeed/>} bg="none" />
+        <Text>WhyHotJar</Text>
+</Flex></Link> 
+<Divider />
+<Link to="/pricing" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton color="red.500" 
+      icon= {<MdDynamicFeed/>} bg="none" />
+       <Text>Pricing</Text>
+</Flex></Link> 
+<Divider />
+<Link to="/about" onClick={()=>onClose()} >
+<Flex alignItems="center" > 
+      <IconButton color="red.500" 
+      icon= {<MdEco/>} bg="none" />
+     <Text>About</Text>
+</Flex></Link>
+<Divider />
+
+
+</VStack>
+
+</AccordionPanel>
+
+
 
             
             

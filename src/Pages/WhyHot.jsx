@@ -1,4 +1,4 @@
-import { Button, Container, Divider, Flex, Highlight, HStack, Image, Stack, Text, VStack } from '@chakra-ui/react'
+import { Button, Container, Divider, Flex, Highlight, HStack, Image, SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
 import { SiAskubuntu, SiObservable } from 'react-icons/si';
@@ -15,9 +15,9 @@ const Links = [
 ]
 
 
-const Pricing = () => {
+const WhyHot = () => {
 
-  ////////////////////////LOADER //////////////////////////////
+    ////////////////////////LOADER //////////////////////////////
 // is Loading   // 
 const [isLoading, setIsLoading] = useState(true);
 
@@ -46,13 +46,38 @@ if(isLoading){
 
        <Stack  p={5} >
        <Text  marginTop={50}  fontWeight="semibold"
-        fontSize={{base:"32px",lg:"42px" }} > Choose a plan that works for you </Text>
+        fontSize={{base:"32px",lg:"42px" }} > Why Hotjar </Text>
 
         <Text fontSize="20px" >Start with a single product or create a custom package for a complete view of your user’s needs</Text>
 
        </Stack>
        
-     <Divider />
+
+
+     <SimpleGrid columns={{base:2, md:3}}  margin="auto" align="center" spacing={5} >
+
+<VStack  justifyContent="left" textAlign="left" p={5} >
+  <Image src='https://images.ctfassets.net/lh3zuq09vnm2/7ddUqkRHENLp65ybfpxC27/ac88f31a04b5509ecdcc512c85347b23/Heatmaps-guide-hero.svg' />
+  <Text fontWeight="semibold">The complete guide to heatmaps</Text>
+  <Text>Heatmaps are a powerful way to understand what users do on your website pages—where they click, how far they scroll, what they look at or ignore. </Text>
+</VStack>
+
+<VStack  justifyContent="left" textAlign="left" p={5} >
+  <Image src='https://images.ctfassets.net/lh3zuq09vnm2/2AEDwOg71AEOHKkHbPYNxv/dc8175848bddbc45a70075ccea56b0a9/behaviour-analytics-guide-hero.svg' />
+  <Text fontWeight="semibold">The beginner’s guide to behavior analytics</Text>
+  <Text>Behavior analytics is the key to understanding your customers, and how they really experience and interact </Text>
+</VStack>
+
+<VStack justifyContent="left" textAlign="left"  p={5}>
+  <Image src='https://images.ctfassets.net/lh3zuq09vnm2/5FTM6xaUDTT4zDxqcgTEH5/a68a0b1e353050da6d1bcf005933ed0a/PX-guide-hero.svg' />
+  <Text fontWeight="semibold">What are product experience insights? (and why every product team needs them)</Text>
+  <Text>Heatmaps are a powerful way to understand what users do on your website pages—where they click. </Text>
+
+</VStack>
+
+</SimpleGrid>
+
+<Divider />
 
     
     <Stack spacing={8}  alignSelf="center" justifyItems="center"  >
@@ -69,7 +94,7 @@ if(isLoading){
            end 
           >
              <HStack p={5} borderRadius={5} bgColor="gray.100" >
-              <Text  >{el.Logo} </Text><Text  fontWeight="semibold" >{el.name}</Text></HStack>
+              <Text  >{el.Logo} </Text><Text >{el.name}</Text></HStack>
           </NavLink>
         ))
        }
@@ -81,9 +106,9 @@ if(isLoading){
      <Divider />
      <Stack  >
        <Text  fontWeight="semibold"
-        fontSize={{base:"32px",lg:"42px" }} > What's included? </Text>
+        fontSize={{base:"32px",lg:"42px" }} > Why HotJar ? </Text>
 
-        <Text fontSize="20px" >See what you get in each product and its plans.
+        <Text fontSize={{base:"xl",md:"4xl"}} >भाई ने बोला करनेका , तो करनेका
      </Text>
 
        </Stack>
@@ -92,7 +117,7 @@ if(isLoading){
 
  
 
-<Stack  bg="linear-gradient(90deg, #efd5ff 0%, #515ada 100%)" direction={{base:"column", md:"row"}} margin="auto" align="center" spacing={5} padding={10} >
+<Stack  bg="linear-gradient(90deg, #fcff9e 0%, #c67700 100%)" direction={{base:"column", md:"row"}} margin="auto" align="center" spacing={5} padding={10} >
 
     <VStack  alignItems="flex-start" textAlign="left" p={5} spacing={6}>
       <Text fontWeight="semibold" fontSize="2xl">Want to become a Hotjar partner?
@@ -121,4 +146,4 @@ if(isLoading){
   )
 }
 
-export default Pricing
+export default WhyHot

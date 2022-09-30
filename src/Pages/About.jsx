@@ -55,7 +55,7 @@ const About = () => {
 
         <Stack marginTop="60px" direction={{base:"column", md:"row"}} >
 
-           <VStack w="50%" textAlign="left" spacing={10}  >
+           <VStack w={{base:"300px", md:"50%"}} textAlign="left" spacing={10}  >
               <Text  fontSize="15px" color="gray.500" >COMPANY / ABOUT US</Text>
               
               <Text fontSize="2xl"  >On a mission to make the web a better place</Text>
@@ -70,7 +70,7 @@ const About = () => {
 
            </VStack>
 
-        <VStack w="50%">
+        <VStack w={{base:"300px", md:"50%"}}>
            <Image w="full" src="https://www.hotjar.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2Flh3zuq09vnm2%2F7nj0B730SdRHjFQh3ot9D0%2F20e2fe55f98fb9ccb27522b44e5c655a%2FCompany_photo_-_2022.png&w=1200&q=75" />
         </VStack>
 

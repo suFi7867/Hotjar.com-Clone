@@ -8,6 +8,7 @@ import About from '../Pages/About'
 import LandingPage from '../Pages/LandingPage'
 import Login from '../Pages/Login'
 import Pricing from '../Pages/Pricing'
+import WhyHot from '../Pages/WhyHot'
 
 const AllRoutes = () => {
   return (
@@ -15,6 +16,13 @@ const AllRoutes = () => {
 
         <Route path='/' element={<LandingPage />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/WhyHotjar' element={<WhyHot />} >
+        <Route index  element={<Ask />} />
+           <Route path='ask' element={<Ask />} />
+           <Route path='observe' element={<Observe />} />
+           <Route path='custom' element={<Custom />} />
+        </Route>
+        
 
            {/* NESETED ROUTES */}  
       <Route path='/pricing' element={<Pricing />} >

@@ -1,6 +1,7 @@
 import { Button, Divider, HStack, SimpleGrid, Spacer, Stack, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import AutoPlay from '../slideShow'
+import Loader from '../SmallComponents/Loader'
 // #fcfae6
 const logoSlider = [
     "https://images.ctfassets.net/lh3zuq09vnm2/3wtrDaAESflMICYhvZtOdE/3d4248c94b553f012fa63a6f0eb52826/Slack.svg",
@@ -19,6 +20,30 @@ const logoSlider = [
 
 ]
 const Custom = () => {
+
+    ////////////////////////LOADER //////////////////////////////
+// is Loading   // 
+const [isLoading, setIsLoading] = useState(true);
+
+setTimeout(() => {
+setIsLoading(false)
+ 
+}, 1000);
+ 
+
+// console.log(data)
+
+if(isLoading){
+
+ return (  
+    <Loader />
+   ) 
+
+}
+
+
+////////////////////////LOADER //////////////////////////////
+
   return (
     <Stack border="white" w="full" maxW="1400px" bg="#fdd835" spacing={25} p={10} >
        
@@ -33,7 +58,7 @@ const Custom = () => {
        </HStack>
  <Divider />
  <AutoPlay images={logoSlider} />
-       <SimpleGrid columns={{base:2,md:3,lg:4}} spacing={5} >
+       <SimpleGrid columns={{base:1,md:3,lg:4}} spacing={5} >
            
      
               <Stack bg="white" border="0.5px solid #6e71cc" spacing={10} textAlign="left"
