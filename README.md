@@ -75,6 +75,11 @@ It's my major project. Hotjar.com is a Web application that reveals the online b
 
 
 <table>
+      <tr>
+          <td><img src="https://i.ibb.co/880bmQT/1-3.png"  alt="men" /></td>
+    <td><img src="https://i.ibb.co/wSvjxWB/1-1.png" height="300px" alt="allProducts" /></td>
+  
+  </tr>
   <tr>
     <td><img src="https://i.ibb.co/CPwg0mx/1-7.png"  alt="home" /></td>
     <td><img src="https://i.ibb.co/BqPrFKc/1-6.png"  alt="coupons" /></td>
@@ -87,10 +92,7 @@ It's my major project. Hotjar.com is a Web application that reveals the online b
     <td><img src="https://i.ibb.co/nQQk3nF/1-5.png" height="300px" alt="allProducts" /></td>
     <td><img src="https://i.ibb.co/vhtRX5C/1-9.png"  alt="men" /></td>
   </tr>
-    <tr>
-    <td><img src="https://i.ibb.co/wSvjxWB/1-1.png" height="300px" alt="allProducts" /></td>
-    <td><img src="https://i.ibb.co/880bmQT/1-3.png"  alt="men" /></td>
-  </tr>
+
 
 
 </table>
@@ -104,8 +106,6 @@ It's my major project. Hotjar.com is a Web application that reveals the online b
 This project was built using React, Chakra UI, HTML, CSS, JavaScript, Rest API . It is an e-commerce web application and for running on your local environment you should follow these guidelines.
 
 
-# PROJECT VERCEL LINK
-https://bewakoof-clone-sufi.vercel.app/
 
 # Getting Started with Create React App
 
